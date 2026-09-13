@@ -1,0 +1,921 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Acessórios | ELISAS TSUNAMI</title>  <meta name="description" content="Acessórios para PlayStation, Xbox e gaming - ELISAS TSUNAMI">
+  <meta name="theme-color" content="#061a36">  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at top, rgba(0, 110, 255, 0.22), transparent 35%),
+        linear-gradient(180deg, #020817 0%, #061a36 50%, #020817 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 140, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 140, 255, 0.035) 1px, transparent 1px);
+      background-size: 35px 35px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 8, 23, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 153, 255, 0.3);
+      box-shadow: 0 5px 25px rgba(0, 100, 255, 0.12);
+    }
+
+    .header-inner {
+      width: min(1200px, 94%);
+      margin: auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 12px rgba(0, 153, 255, 0.6));
+    }
+
+    .brand-text h1 {
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #36aaff;
+      font-size: 11px;
+      margin-top: 3px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      padding: 10px 13px;
+      border-radius: 10px;
+      color: #dbeeff;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    nav a:hover {
+      background: rgba(0, 136, 255, 0.15);
+      color: #fff;
+    }
+
+    .whatsapp-nav {
+      background: #16a34a;
+      color: white !important;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(22, 163, 74, 0.25);
+    }
+
+    .whatsapp-nav:hover {
+      background: #22c55e !important;
+      transform: translateY(-2px);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      width: min(1200px, 94%);
+      margin: auto;
+      padding: 70px 0 45px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid rgba(0, 153, 255, 0.45);
+      border-radius: 999px;
+      color: #5db9ff;
+      background: rgba(0, 119, 255, 0.08);
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: clamp(32px, 6vw, 60px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      text-shadow: 0 0 25px rgba(0, 140, 255, 0.3);
+    }
+
+    .hero h2 span {
+      color: #1597ff;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #a9c7e5;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ================= PESQUISA ================= */
+
+    .tools {
+      width: min(900px, 94%);
+      margin: 10px auto 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 17px 20px;
+      border: 1px solid rgba(0, 153, 255, 0.35);
+      border-radius: 15px;
+      outline: none;
+      color: white;
+      background: rgba(4, 19, 42, 0.85);
+      font-size: 15px;
+      box-shadow: 0 0 20px rgba(0, 119, 255, 0.08);
+    }
+
+    .search-box input:focus {
+      border-color: #1597ff;
+      box-shadow: 0 0 22px rgba(0, 153, 255, 0.2);
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      border: 1px solid rgba(0, 153, 255, 0.3);
+      background: rgba(5, 25, 52, 0.8);
+      color: #b9d8f5;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #0879dc;
+      color: white;
+      border-color: #1597ff;
+      box-shadow: 0 0 16px rgba(0, 140, 255, 0.3);
+    }
+
+    /* ================= PRODUTOS ================= */
+
+    .section {
+      width: min(1200px, 94%);
+      margin: 0 auto 60px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 5px;
+      height: 32px;
+      border-radius: 5px;
+      background: #1597ff;
+      box-shadow: 0 0 14px rgba(0, 153, 255, 0.7);
+    }
+
+    .section-title h3 {
+      font-size: 25px;
+    }
+
+    .section-title p {
+      color: #7fa6c9;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      background: linear-gradient(
+        145deg,
+        rgba(9, 34, 66, 0.96),
+        rgba(3, 15, 32, 0.98)
+      );
+      border: 1px solid rgba(0, 153, 255, 0.2);
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 153, 255, 0.6);
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(0, 128, 255, 0.12);
+    }
+
+    .product-image {
+      height: 245px;
+      background: #fff;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: 0.35s;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.04);
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-tag {
+      display: inline-block;
+      font-size: 10px;
+      color: #5db9ff;
+      background: rgba(0, 136, 255, 0.1);
+      border: 1px solid rgba(0, 153, 255, 0.2);
+      border-radius: 999px;
+      padding: 5px 9px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .product-info h4 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #91b0cc;
+      font-size: 13px;
+      line-height: 1.6;
+      min-height: 42px;
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .order-btn {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 10px;
+      border-radius: 10px;
+      background: #16a34a;
+      color: #fff;
+      font-weight: bold;
+      font-size: 13px;
+      transition: 0.25s;
+    }
+
+    .order-btn:hover {
+      background: #22c55e;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(22, 163, 74, 0.2);
+    }
+
+    .details-btn {
+      padding: 12px 13px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 153, 255, 0.3);
+      color: #9fd2ff;
+      background: rgba(0, 120, 255, 0.07);
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* ================= MENSAGEM VAZIA ================= */
+
+    #noResults {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      color: #91b0cc;
+    }
+
+    /* ================= CONTACTO ================= */
+
+    .contact-box {
+      width: min(1000px, 94%);
+      margin: 0 auto 65px;
+      padding: 35px;
+      text-align: center;
+      border: 1px solid rgba(0, 153, 255, 0.3);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at center, rgba(0, 119, 255, 0.14), transparent 65%),
+        rgba(3, 16, 34, 0.9);
+    }
+
+    .contact-box h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      color: #91b0cc;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .main-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-radius: 12px;
+      background: #16a34a;
+      color: white;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .main-whatsapp:hover {
+      background: #22c55e;
+      transform: translateY(-3px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      border-top: 1px solid rgba(0, 153, 255, 0.15);
+      background: rgba(1, 7, 18, 0.95);
+      padding: 28px 15px;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #36aaff;
+    }
+
+    footer p {
+      color: #6e8ba6;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    /* ================= RESPONSIVO ================= */
+
+    @media (max-width: 900px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .header-inner {
+        flex-direction: column;
+        padding: 13px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 45px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-image {
+        height: 270px;
+      }
+
+      .brand-text h1 {
+        font-size: 17px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 8px 9px;
+      }
+
+      .contact-box {
+        padding: 25px 18px;
+      }
+    }
+  </style></head><body>  <!-- ================= CABEÇALHO ================= -->  <header>
+    <div class="header-inner">  <a href="index.html" class="brand">
+    <img src="logo.png" alt="Logo ELISAS TSUNAMI">
+    <div class="brand-text">
+      <h1>ELISAS TSUNAMI</h1>
+      <span>GAMING • TECNOLOGIA • ASSISTÊNCIA</span>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="jogos.html">🎮 Jogos</a>
+    <a href="acessorios.html">🕹️ Acessórios</a>
+    <a href="index.html#reparacao">🔧 Reparação</a>
+
+    <a
+      class="whatsapp-nav"
+      href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Quero%20saber%20mais%20sobre%20os%20acessórios."
+      target="_blank"
+      rel="noopener">
+      WhatsApp
+    </a>
+  </nav>
+
+</div>
+
+  </header>  <!-- ================= HERO ================= -->  <main><section class="hero">
+
+  <div class="hero-badge">
+    ACESSÓRIOS GAMING
+  </div>
+
+  <h2>
+    Equipamentos para<br>
+    <span>melhorar o seu jogo</span>
+  </h2>
+
+  <p>
+    Encontre controles, bases carregadoras, cabos, headset,
+    armazenamento e outros acessórios para o seu console.
+    Escolha um produto e fale diretamente com a ELISAS TSUNAMI.
+  </p>
+
+</section>
+
+<!-- ================= PESQUISA ================= -->
+
+<section class="tools">
+
+  <div class="search-box">
+    <input
+      type="search"
+      id="search"
+      placeholder="🔎 Pesquisar acessórios..."
+      autocomplete="off">
+  </div>
+
+  <div class="filters">
+
+    <button class="filter-btn active" data-filter="todos">
+      Todos
+    </button>
+
+    <button class="filter-btn" data-filter="playstation">
+      PlayStation
+    </button>
+
+    <button class="filter-btn" data-filter="xbox">
+      Xbox
+    </button>
+
+    <button class="filter-btn" data-filter="audio">
+      Áudio
+    </button>
+
+    <button class="filter-btn" data-filter="cabos">
+      Cabos
+    </button>
+
+    <button class="filter-btn" data-filter="armazenamento">
+      Armazenamento
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ================= PRODUTOS ================= -->
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h3>Acessórios disponíveis</h3>
+      <p>Fotografias reais dos produtos enviados.</p>
+    </div>
+  </div>
+
+  <div class="products" id="products">
+
+    <!-- 1 -->
+
+    <article
+      class="product-card"
+      data-category="playstation"
+      data-name="Base Sony para controles PlayStation">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/base-sony.jpg"
+          alt="Base Sony para controles PlayStation"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">PlayStation</span>
+
+        <h4>Base Sony para controles</h4>
+
+        <p>
+          Base para organizar e carregar controles PlayStation.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20na%20Base%20Sony%20para%20controles."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Base Sony para controles')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 -->
+
+    <article
+      class="product-card"
+      data-category="playstation"
+      data-name="Base dupla para controles PS4">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/base-dupla.jpg"
+          alt="Base dupla para controles PS4"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">PlayStation</span>
+
+        <h4>Base dupla PS4</h4>
+
+        <p>
+          Base para dois controles PlayStation.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20na%20Base%20Dupla%20PS4."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Base dupla PS4')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 -->
+
+    <article
+      class="product-card"
+      data-category="audio"
+      data-name="Headset gamer com microfone">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/headset-gamer.png"
+          alt="Headset gamer com microfone"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">Áudio</span>
+
+        <h4>Headset Gamer</h4>
+
+        <p>
+          Headset gamer com microfone para jogar e comunicar.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20no%20Headset%20Gamer."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Headset Gamer')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 -->
+
+    <article
+      class="product-card"
+      data-category="xbox"
+      data-name="Controle Xbox">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/controle-xbox.jpg"
+          alt="Controle Xbox"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">Xbox</span>
+
+        <h4>Controle Xbox</h4>
+
+        <p>
+          Controle para Xbox com design confortável para jogar.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20no%20Controle%20Xbox."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Controle Xbox')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 -->
+
+    <article
+      class="product-card"
+      data-category="playstation"
+      data-name="Controle PS5 DualSense">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/controle-ps5.jpg"
+          alt="Controle PS5 DualSense"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">PlayStation 5</span>
+
+        <h4>Controle PS5 DualSense</h4>
+
+        <p>
+          Controle para PlayStation 5.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20no%20Controle%20PS5%20DualSense."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Controle PS5 DualSense')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 -->
+
+    <article
+      class="product-card"
+      data-category="playstation"
+      data-name="Controle PS4">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/controle-ps4.jpg"
+          alt="Controle PS4"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">PlayStation 4</span>
+
+        <h4>Controle PS4</h4>
+
+        <p>
+          Controle DualShock 4 para PlayStation 4.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20no%20Controle%20PS4."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Controle PS4')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 7 -->
+
+    <article
+      class="product-card"
+      data-category="cabos"
+      data-name="Cabo HDMI para PlayStation e Xbox">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/cabo-hdmi.jpg"
+          alt="Cabo HDMI"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">Cabos</span>
+
+        <h4>Cabo HDMI</h4>
+
+        <p>
+          Cabo HDMI para ligação de consoles à televisão ou monitor.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20no%20Cabo%20HDMI."
+            target="_blank"
+            rel="noopener">
+            📲 Pedir
+          </a>
+
+          <button
+            class="details-btn"
+            onclick="mostrarDetalhes('Cabo HDMI')">
+            ℹ
+          </button>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- 8 -->
+
+    <article
+      class="product-card"
+      data-category="playstation"
+      data-name="Controle PS3">
+
+      <div class="product-image">
+        <img
+          src="imagens/acessorios/controle-ps3.jpg"
+          alt="Controle PS3"
+          loading="lazy">
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-tag">PlayStation 3</span>
+
+        <h4>Controle PS3</h4>
+
+        <p>
+          Controle para PlayStation 3.
+        </p>
+
+        <div class="product-actions">
+
+          <a
+            class="order-btn"
+            href="https://wa.me/244952497779?text=Olá%20ELISAS%20TSUNAMI!%20Tenho%20interesse%20no%
